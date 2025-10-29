@@ -1,0 +1,19 @@
+export AWS_REGION=us-east-1
+export BEDROCK_MODEL_ID=anthropic.claude-3-sonnet
+export DB_HOST=my-redshift.cluster.amazonaws.com
+export DB_NAME=salesdb
+export DB_USER=admin
+export DB_PASS=XXXX
+export MCP_URL=http://localhost:8080
+export TABLEAU_URL=https://tableau.myorg.com
+export TABLEAU_PAT=<PAT_TOKEN>
+
+uvicorn orchestrator.main:app --reload
+
+
+
+Then test via:
+curl -X POST http://localhost:8000/query \
+ -H "Content-Type: application/json" \
+ -d '{"user_query":"Show top 10 products by sales","data_source":"sales_ds"}'
+
