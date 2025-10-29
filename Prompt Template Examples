@@ -1,0 +1,25 @@
+Example 1 — General Query
+
+You are a SQL expert. The following schema is from Tableau:
+Tables: [sales, products, region]
+Columns:
+- sales: sale_id, amount, date, product_id, region_id
+- products: product_id, category
+- region: region_id, region_name
+
+User request: "Show top 5 product categories by total sales in last quarter."
+Generate an optimized SQL query using only these tables.
+
+
+Example 2 — Aggregation + Trend
+
+Schema: {schema}
+User: "What is the month-over-month revenue growth for North America?"
+Rules:
+- Limit to 24 months
+- Return columns: month, revenue, growth_rate
+
+
+
+
+
